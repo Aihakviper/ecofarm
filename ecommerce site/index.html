@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="head">
+          <div class="logo">AgroVet<span>Connect</span></div>
+          <button class="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <nav class="navbar">
+            <ul class="navbar-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#agents">Agents</a></li>
+              <li><a href="#contacts">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hero">
+          <div class="hero-details">
+            <h1>Connecting Farmers to Trusted Agro & Vet Solutions</h1>
+            <p>
+              Buy livestock medicines, farming tools, seeds and connect with
+              nearby agents and veterinary professionals.
+            </p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- produccts -->
+        <section id="products" class="products">
+          <h2>Featured Products</h2>
+          <div class="prod-cont">
+            <div class="product-cards">
+              <div class="img">
+                <img src="./img/live stock antibiotics.png" alt="medicines" />
+              </div>
+              <h3>livestock Antibiotics</h3>
+              <p>Effective Treatment for Bacteria Infections</p>
+              <button class="addToCart">Add to Cart</button>
+            </div>
+            <div class="product-cards">
+              <div class="img">
+                <img src="./img/poultry feed.png" alt="feeds" />
+              </div>
+              <h3>Poultry Feed</h3>
+              <p>High Protein Broiler feed mix</p>
+              <button class="addToCart">Add to Cart</button>
+            </div>
+            <div class="product-cards">
+              <div class="img">
+                <img src="./img/maize seed.png" alt="seed" />
+              </div>
+              <h3>Maize Seeds</h3>
+              <p>High yield maize seeds</p>
+              <button class="addToCart">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+        <!-- agents -->
+        <section id="agents" class="agents">
+          <h2>Meet Our Trusted Agents</h2>
+          <div class="agent-cont">
+            <div class="agent-card">
+              <div class="img">
+                <img class="vet-doc" src="./img/vet doctor.jpg" alt="agent" />
+              </div>
+              <h3>Vet Doctor</h3>
+              <p>veterinary Consultant</p>
+              <button class="viewStore">View Store</button>
+            </div>
+            <div class="agent-card">
+              <div class="img">
+                <img src="./img/green famr store.png" alt="agent" />
+              </div>
+              <h3>GreenFarm Store</h3>
+              <p>livestock Medicine Distributor</p>
+              <button class="viewStore">View Store</button>
+            </div>
+            <div class="agent-card">
+              <div class="img">
+                <img src="./img/agro plus.png" alt="agent" />
+              </div>
+              <h3>AgroPlus Experts</h3>
+              <p>Farming and Vet tools Supplier</p>
+              <button class="viewStore">View Store</button>
+            </div>
+          </div>
+        </section>
+        <!-- cta -->
+        <section id="contacts" class="cta">
+          <h2>Contact Us</h2>
+          <form>
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" placeholder="Enter Your Name" />
+
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" placeholder="example@gmail.com" />
+
+            <label for="Message">Message:</label>
+            <textarea
+              name="Message"
+              id="message"
+              cols="5"
+              rows="10"
+              placeholder="Enter your message here..."
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; All Rights Reserved. AgroVet Connect</p>
+      </footer>
+    </div>
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navbar = document.querySelector(".navbar");
+
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("active");
+        navbar.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
