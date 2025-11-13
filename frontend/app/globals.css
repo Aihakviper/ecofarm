@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* FarmAid AI Color Palette */
+    --primary: #2E7D32;          /* green-700 - Trust + vitality */
+    --secondary: #1565C0;        /* blue-700 - Tech and precision */
+    --accent: #81D4FA;           /* sky-300 - Fresh and calming */
+    --background: #F4F6F8;       /* gray-100 - Soft, balanced tone */
+    --foreground: #1A1A1A;       /* gray-900 - Primary text */
+    --highlight: #FDD835;        /* yellow-500 - CTA emphasis */
+    --error: #C62828;            /* red-700 - Alerts */
+    
+    /* Semantic tokens */
+    --success: #2E7D32;
+    --warning: #F57C00;
+    --info: #1565C0;
+  }
+
+  body {
+    background-color: rgb(244, 246, 248);
+    color: rgb(26, 26, 26);
+    font-family: var(--font-geist-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(46, 125, 50);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(27, 94, 32);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(21, 101, 192);
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgb(13, 71, 161);
+    box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
+  }
+
+  .btn-outline {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgb(46, 125, 50);
+    background-color: transparent;
+    color: rgb(46, 125, 50);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn-outline:hover {
+    background-color: rgb(245, 250, 246);
+  }
+
+  .btn-cta {
+    padding: 1rem 2rem;
+    background-color: rgb(253, 216, 53);
+    color: rgb(26, 26, 26);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-cta:hover {
+    background-color: rgb(251, 192, 45);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-hover {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: rgb(46, 125, 50);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .badge-success {
+    background-color: rgb(220, 253, 230);
+    color: rgb(46, 125, 50);
+  }
+
+  .badge-error {
+    background-color: rgb(253, 230, 230);
+    color: rgb(198, 40, 40);
+  }
+
+  .badge-info {
+    background-color: rgb(227, 242, 253);
+    color: rgb(21, 101, 192);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: rgb(26, 26, 26);
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: rgb(75, 85, 99);
+    margin-bottom: 2rem;
+  }
+
+  .container-safe {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-safe {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-safe {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
